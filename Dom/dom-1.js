@@ -24,6 +24,8 @@ document.body.appendChild(fragement)
 // Event addEventListener
 //here is i select the document and aslo i give him target so it will click only div.and also i make element and append it into body , if we do that in normal way then the clicks doesnot work on append element.
 
+/*
+
 addGlobalEventListener('click', 'div' ,  e => {
     console.log('Hii')
 })
@@ -42,3 +44,12 @@ newDiv.style.width = '300px'
 newDiv.style.backgroundColor = '#111'
 
 body.append(newDiv)
+
+
+*/
+// this how we can hadles the clicks
+document.querySelector('.list').addEventListener('click', e => {
+    if(e.target.matches('.item')){
+        console.log('you have click on' , e.target.innerText)
+    }
+})
