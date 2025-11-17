@@ -24,12 +24,10 @@ function renderTodo(){
 
 
 const removeBtn = document.querySelectorAll('.remove-btn')
-    removeBtn.forEach((btn) => {
+    removeBtn.forEach((btn , index) => {
         btn.addEventListener('click' , () => {
-            todoItem.forEach((value , index) => {
-                value.splice(index, 1)
-                renderTodo()
-            })
+            todoItem.splice(index, 1)
+            renderTodo()
         })
     })
 }
