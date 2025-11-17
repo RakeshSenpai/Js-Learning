@@ -22,6 +22,9 @@ document.body.appendChild(fragement)
 */
 
 // Event addEventListener
+
+//there is two types of Event one is bubling and second is capturing
+//the bubling tree goes from child to parent and the capture comes from document to child or disanded
 //here is i select the document and aslo i give him target so it will click only div.and also i make element and append it into body , if we do that in normal way then the clicks doesnot work on append element.
 
 /*
@@ -47,9 +50,33 @@ body.append(newDiv)
 
 
 */
+
+
 // this how we can hadles the clicks
-document.querySelector('.list').addEventListener('click', e => {
-    if(e.target.matches('.item')){
-        console.log('you have click on' , e.target.innerText)
-    }
-})
+// const list = document.querySelector('.list')
+
+// function handler(e){
+    
+//     if(e.target.matches('.item')){
+//         console.log('you have click on' , e.target.innerText)
+//     }
+
+// }
+// list.addEventListener('click' , handler)
+
+// list.addEventListener('click' , handler)
+// setTimeout(() => {
+//     list.removeEventListener('click' , handler) 
+// },  2000)
+
+
+// const items = ["Apple", "Banana", "Mango", "Grape"];
+
+// function fetchResults(query) {
+//     const filtered = items.filter(item => 
+//         item.toLowerCase().includes(query.toLowerCase())
+//     );
+//         console.log("Matches:", filtered);
+
+// }
+// fetchResults('Apple')
