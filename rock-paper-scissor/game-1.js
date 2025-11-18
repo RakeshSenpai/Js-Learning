@@ -25,8 +25,8 @@ let score = {
 
 
     const emoji = {
-      Rock: "🪨",
-      Paper: "📄",
+      Rock: "✊🏻",
+      Paper: "✋🏻",
       Scissor: "✂️"
     };
 
