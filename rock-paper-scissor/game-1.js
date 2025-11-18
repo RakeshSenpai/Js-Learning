@@ -34,7 +34,7 @@ function playerMove(move){
         }else if(computer === 'Rock'){
             playerChoose = 'Tie'
         }else{
-            playerChoose = 'Loose'
+            playerChoose = 'Lose'
         }
     }
     
@@ -45,7 +45,7 @@ function playerMove(move){
         }else if(computer === 'Paper'){
             playerChoose = 'Tie'
         }else{
-            playerChoose = 'Loose'
+            playerChoose = 'Lose'
         }
     }
     
@@ -57,17 +57,28 @@ function playerMove(move){
         }else if(computer === 'Scissor'){
             playerChoose = 'Tie'
         }else{
-            playerChoose = 'Loose'
+            playerChoose = 'Lose'
         }
     }
 
-    
+    if(playerChoose === 'Win'){
+        score.wins += 1
+    }else if(playerChoose === 'Lose'){
+        score.lose += 1
+    }else if(playerChoose === 'Tie'){
+        score.tie += 1
+    }
+
+    document.querySelector('.score-board')
+    .innerText = `Wins ${score.wins}, Losses ${score.lose} , Tie ${score.tie}`
 
     let resultShow = document.querySelector('.result-texts')
     resultShow.innerText = playerChoose
     document.querySelector('.computer-move')
     .innerText = `You Picked - ${move} , Computer Picked - ${computer}`
 }
+
+console.log(score)
 
 
 const rockBtn = document.querySelector('.rock')
