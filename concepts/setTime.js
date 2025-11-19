@@ -20,3 +20,16 @@ console.log(setTime)
 //   timeElement.innerText = new Date().toLocaleTimeString();
 // }, 1000);
 
+
+/*
+document.getElementById('btn').addEventListener('click' ,() => {
+    const popUp = document.getElementById('popUp')
+    popUp.style.display = 'block'
+
+    setTimeout(() => {
+        popUp.style.display = 'none'
+    } , 3000)
+})
+
+*/
+
