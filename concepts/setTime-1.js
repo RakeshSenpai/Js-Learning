@@ -19,12 +19,21 @@ submitBtn.addEventListener('click' , () => {
 let timer;
 
 const loadingShow = document.getElementById('loading')
-function handler (){
+function searchHandler (){
      clearTimeout(timer); 
     timer = setTimeout(() => {
     loadingShow.innerText = 'Searching..'
     } , 500)
 }
 
-document.querySelector('.search-btn').addEventListener('click' , () => handler() )
+document.querySelector('.search-btn').addEventListener('click' , () => searchHandler() )
 */
+
+const clock = document.querySelector('.clock')
+
+function updateClock(){
+    let now = new Date()
+    clock.innerText = now.toLocaleTimeString()
+}
+
+const intervalId = setInterval(updateClock , 1000)
