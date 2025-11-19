@@ -33,3 +33,11 @@ document.getElementById('btn').addEventListener('click' ,() => {
 
 */
 
+document.getElementById('loadBtn').addEventListener('click' , () => {
+    const loadingData = document.getElementById('loading')
+    loadingData.innerText = 'Loading....'
+    setTimeout(() => {
+        loadingData.innerText = 'Done ✅'
+    } ,2000)
+
+})
