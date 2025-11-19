@@ -31,7 +31,8 @@ start.addEventListener('click' , () => {
 })
 
 stop.addEventListener('click' , () => {
+    if(intervalId){
     clearInterval(intervalId)
-    intervalId = null
-    display.innerText = ''
+    intervalId = null        
+    }
 })
