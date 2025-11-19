@@ -11,3 +11,13 @@ function welcomeMessage(userName) {
 
 console.log(proccessUser('Rakesh' , '22', welcomeMessage))
 
+
+function greet(name){
+    console.log('Hey' + name)
+}
+
+function runner (callback){
+    callback('Rakesh')
+}
+
+runner(greet)

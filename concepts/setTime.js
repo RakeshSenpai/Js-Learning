@@ -1,0 +1,22 @@
+// this function is async because it doesnot waits for anyone.
+
+const setTime = setTimeout(() => {
+    console.log('i am printing after 3seconds')
+},3000)
+
+console.log(setTime)
+
+// const intervalTimer = setInterval(() => {
+//     console.log('hey i am setInterval')
+// }, 2000)
+
+// console.log(intervalTimer)
+
+
+
+// const  timeElement = document.querySelector('.time')
+
+// setInterval(() => {
+//   timeElement.innerText = new Date().toLocaleTimeString();
+// }, 1000);
+
