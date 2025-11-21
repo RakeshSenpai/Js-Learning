@@ -13,7 +13,9 @@ let intervalId
 
     }
 const startChanginColor = function (){
-    intervalId = setInterval(changeColor , 1000)
+    if(!intervalId){
+        intervalId = setInterval(changeColor , 1000)
+    }
 }
 
 const stopChanginColor = function(){
