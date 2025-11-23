@@ -11,3 +11,20 @@ xhr.onreadystatechange = function (){
 }
 
 xhr.send()
+
+
+//XMLHttpRequest() properties --->
+// xhr.readyState
+
+// xhr.status
+
+// xhr.responseText
+
+// xhr.onreadystatechange
+
+//and methods --> 
+// .open()
+
+// .send()
+
+// .setRequestHeader()
