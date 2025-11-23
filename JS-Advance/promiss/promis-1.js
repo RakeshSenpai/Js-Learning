@@ -27,6 +27,8 @@ new Promise((resolve , reject) => {
 //you can pass anything also i can pass strings,arrays.
 //and we can access it
 
+/*
+
 const thirdPromise = new Promise((resolve , reject) => {
     setTimeout(() => {
         console.log('Hey there is one is third')
@@ -36,4 +38,12 @@ const thirdPromise = new Promise((resolve , reject) => {
 
 thirdPromise.then((user) => {
     console.log(user)
+})
+
+*/
+
+const fourthPromise = new Promise((resolve , reject) => {
+    setInterval(() => {
+        
+    })
 })
