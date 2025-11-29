@@ -30,7 +30,7 @@ task2
 */
 
 const randomNUmber = new Promise((resolve , reject) => {
-    let number = 6
+    let number = Math.floor(Math.random() * 10) 
     if(number > 5){
         resolve('the number is greater than 5')
     } else{
