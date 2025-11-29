@@ -65,18 +65,25 @@ thirdPractice.then((num) => {
 */
 
 function checkPassword(pass){
-    new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         if(pass === 'secret'){
             resolve('access granted')
         }else{
             reject('access denied')
         }
-    }).then((password) => {
-        console.log(password)
-    }).catch((error) => {
-        console.log(error)
     })
+
 }
 
-checkPassword('secret')
+async function runCheck(){
+    try{
+    const response = await checkPassword('secret')
+    console.log(response)        
+    }
+    catch (error) {
+        console.log(error)
+    }
 
+}
+
+runCheck()
