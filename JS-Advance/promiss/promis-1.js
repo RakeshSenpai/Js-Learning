@@ -8,7 +8,7 @@ const firstPromise = new Promise((resolve , reject) => {
 })
 
 firstPromise.then( () => {
-    console.log(' I am printed after resovled')
+    console.log('I am printed after resovled')
 })
 
 //second one we can directly use then
