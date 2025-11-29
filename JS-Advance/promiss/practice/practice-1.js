@@ -29,6 +29,8 @@ task2
 
 */
 
+/*
+
 const randomNUmber = new Promise((resolve , reject) => {
     let number = Math.floor(Math.random() * 10) 
     console.log(number)
@@ -45,3 +47,16 @@ console.log(nums)
 .catch((error) => {
     console.log(error)
 })
+    */
+
+const thirdPractice = new Promise((resolve , reject) => {
+    let number = 5
+    resolve(number)
+})
+
+thirdPractice.then((num) => {
+    return num * 10
+}).then((num) => {
+    console.log(num + 10)
+})
+
