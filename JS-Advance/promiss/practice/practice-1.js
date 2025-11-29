@@ -49,6 +49,8 @@ console.log(nums)
 })
     */
 
+/*
+
 const thirdPractice = new Promise((resolve , reject) => {
     let number = 5
     resolve(number)
@@ -59,4 +61,22 @@ thirdPractice.then((num) => {
 }).then((num) => {
     console.log(num + 10)
 })
+
+*/
+
+function checkPassword(pass){
+    new Promise((resolve, reject) => {
+        if(pass === 'secret'){
+            resolve('access granted')
+        }else{
+            reject('access denied')
+        }
+    }).then((password) => {
+        console.log(password)
+    }).catch((error) => {
+        console.log(error)
+    })
+}
+
+checkPassword('secret')
 
