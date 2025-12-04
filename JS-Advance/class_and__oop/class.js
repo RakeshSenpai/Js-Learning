@@ -53,6 +53,7 @@ console.log(anotherUser.encryptPass())
 console.log(anotherUser.changerPass())
 */
 
+/*
 // Inheritence
 
 class User{
@@ -85,3 +86,38 @@ second.addCourse()
 // first.addCourse()// this will throw error, because it doesnot Inheritence from Teacher class
 console.log(second instanceof User)
 console.log(first instanceof Teacher)
+*/
+
+/*
+//static
+class NewUser{
+    constructor(username, email, pass){
+        this.username = username
+        this.email = email 
+        this.pass = pass
+    }
+
+    logMe(){
+        console.log(`Username: ${this.username}`)
+    }
+
+    static createId(){
+        return `123@abcd`
+    }
+
+}
+
+class OldUser extends NewUser{
+    constructor(username, email){
+        super(username)
+        this.email = email
+    }
+}
+
+const newUserDetails = new NewUser('Rakesh', 'rk@gmail.com' , '123')
+// console.log(newUserDetails.createId())
+const oldUserDetails = new OldUser('Rhynamo' , 'rhyno@gmail.com')
+// console.log(oldUserDetails.createId)()
+oldUserDetails.logMe()
+*/
+
