@@ -26,6 +26,8 @@ console.log(anotherUser.changerPass())
 
 */
 
+// behind the scene
+
 function User(username, email, password){
         this.username = username
         this.email = email
