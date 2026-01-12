@@ -10,9 +10,9 @@ async function apiFetch() {
     console.log(data)
 }
 
-apiFetch()
+console.log(apiFetch())
 
 
 function renderApi(){
-    
+
 }
