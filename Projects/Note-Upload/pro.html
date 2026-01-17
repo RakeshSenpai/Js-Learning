@@ -4,10 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            width: 100%;
+            min-height: 100vh;
+           background: linear-gradient(135deg, #6eb0c1, #7adff5);
+            color: #fff;
+            padding: 0 2rem;
+        }
+        .input-box{
+            width: 100%;
+            max-width: 500px;
+            min-height: 200px;
+            color: #333;
+            background: #fff;
+            border-radius: 8px;
+            img{
+                height: 20px;
+                width: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <h1>NOTES</h1>
+        <button class="btn">Create Notes</button>
+        
+    <div class="note-container">
 
+    </div>
+
+    </div>
     <script src="pro.js"></script>
 </body>
 </html>
