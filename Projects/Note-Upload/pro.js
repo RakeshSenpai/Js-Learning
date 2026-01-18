@@ -15,6 +15,10 @@ function saveToLocalStorage(){
     localStorage.setItem('notes' , noteContainer.innerHTML)
 }
 
+function showItems(){
+    noteContainer.innerHTML = localStorage.getItem('notes')
+}
+
 noteContainer.addEventListener('click', (e) => {
     if(e.target.tagName === 'IMG'){
         e.target.parentElement.remove()
