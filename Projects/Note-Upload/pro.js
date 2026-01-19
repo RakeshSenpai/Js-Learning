@@ -1,34 +1,75 @@
 const noteContainer = document.querySelector('.note-container')
-const createElm = document.querySelector('.btn')
-const notes = document.querySelectorAll('.input-box')
+const createBtn = document.querySelector('.btn')
 
-createElm.addEventListener('click' , () => {
-    let para = document.createElement('p')
-    let img = document.createElement('img')
-    para.className = ('input-box')
-    para.setAttribute('contenteditable' , 'true')
-    img.src = '../images/delete.png'
-    noteContainer.appendChild(para).appendChild(img)
+let notes = []
+
+/* ---------- Storage Layer ---------- */
+function loadNotes() {
+    const data = localStorage.getItem('notes')
+    notes = data ? JSON.parse(data) : []
+}
+
+function saveNotes() {
+    localStorage.setItem('notes', JSON.stringify(notes))
+}
+
+/* ---------- UI Rendering ---------- */
+function renderNotes() {
+    noteContainer.innerHTML = ''
+
+    notes.forEach(note => {
+        const p = document.createElement('p')
+        const img = document.createElement('img')
+
+        p.className = 'input-box'
+        p.contentEditable = true
+        p.dataset.id = note.id
+        p.textContent = note.text
+
+        img.src = '../images/delete.png'
+        img.alt = 'Delete note'
+
+        p.appendChild(img)
+        noteContainer.appendChild(p)
+    })
+}
+
+/* ---------- Create Note ---------- */
+createBtn.addEventListener('click', () => {
+    const newNote = {
+        id: Date.now(),
+        text: ''
+    }
+
+    notes.push(newNote)
+    saveNotes()
+    renderNotes()
 })
 
-function saveToLocalStorage(){
-    localStorage.setItem('notes' , noteContainer.innerHTML)
-}
+/* ---------- Edit Note ---------- */
+noteContainer.addEventListener('input', (e) => {
+    if (!e.target.classList.contains('input-box')) return
 
-function showItems(){
-    noteContainer.innerHTML = localStorage.getItem('notes')
-}
+    const id = Number(e.target.dataset.id)
+    const note = notes.find(n => n.id === id)
 
+    if (note) {
+        note.text = e.target.textContent.replace('🗑️', '').trim()
+        saveNotes()
+    }
+})
+
+/* ---------- Delete Note ---------- */
 noteContainer.addEventListener('click', (e) => {
-    if(e.target.tagName === 'IMG'){
-        e.target.parentElement.remove()
-        saveToLocalStorage()
-    }
-    else if(e.target.tagName === 'P'){
-        notes.forEach(nt => {
-            nt.onkeyup = function(){
-                saveToLocalStorage()
-            }
-        })
-    }
+    if (e.target.tagName !== 'IMG') return
+
+    const id = Number(e.target.parentElement.dataset.id)
+    notes = notes.filter(note => note.id !== id)
+
+    saveNotes()
+    renderNotes()
 })
+
+/* ---------- Init ---------- */
+loadNotes()
+renderNotes()
