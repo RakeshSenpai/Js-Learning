@@ -30,6 +30,18 @@ body{
     justify-content: space-between;
 }
 
+.header-info{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 1;
+}
+
+.chatbot-logo{
+    background: #fff;
+    border-radius: 50%;
+}
+
 .logo{
     font-size: 1.2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -61,3 +73,13 @@ body{
     background: #433ddf; 
 }
 
+.chat-body{
+    border: 2px solid red;
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    gap: 20px;
+    overflow-y: auto;
+    height: 460px;
+    flex-direction: column;
+    margin-bottom: 76px;
+}
