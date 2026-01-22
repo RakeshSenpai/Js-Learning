@@ -40,6 +40,9 @@ body{
 .chatbot-logo{
     background: #fff;
     border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    padding: 8px;
 }
 
 .logo{
@@ -74,7 +77,6 @@ body{
 }
 
 .chat-body{
-    border: 2px solid red;
     padding: 1.2rem 1.4rem;
     display: flex;
     gap: 20px;
@@ -82,4 +84,54 @@ body{
     height: 460px;
     flex-direction: column;
     margin-bottom: 76px;
+}
+
+.chat-body .message{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bot-avatar{
+    height: 36px;
+    width: 36px;
+    padding: 6px;
+    fill: #fff;
+    flex-shrink: 0;
+    align-self: flex-end;
+    background: #5350c4;
+    border-radius: 50%;
+}
+
+.message-text{
+    padding: 12px 12px;
+    max-width: 75%;
+    font-size: 0.9rem;
+}
+
+.user-message{
+    flex-direction: column;
+    align-items: flex-end;
+}
+.bot-message .message-text{
+    border-radius: 13px 13px 13px 3px;
+    padding: 12px 12px;
+    background: #e3e3e3;
+}
+
+.chat-body .user-message .message-text{
+    color: #fff;
+    background: #5350c4;
+    border-radius: 13px 13px 3px 13px;
+}
+
+.thinking-indicator .dot{
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background: #6f6bc2;
+    animation: dotPulse 1.8s ease-in-out infinite;
+}
+.chat-footer{
+    position: absolute;
 }
