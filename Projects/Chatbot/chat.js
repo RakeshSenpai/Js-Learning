@@ -18,8 +18,9 @@ const userData = {
 function handleOutGoingMessage(e){
     e.preventDefault()
     userData.message = messageInput.value.trim()
-    const messageContent = `<div class="message-text">${userData.message}</div>`
+    const messageContent = `<div class="message-text"></div>`
     const outGoingMessageDiv = createMessageElm(messageContent, 'user-message')
+    outGoingMessageDiv.querySelector('message-text').textContent = userData.message
     chatBody.appendChild(outGoingMessageDiv)
 }
 
